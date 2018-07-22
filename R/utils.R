@@ -122,7 +122,8 @@ read.gct <- function(gct, ...) {
         pdata.raw <- t(read.tsv(gct, skip = 2, nrows = ann.col + 1,
                                 header = FALSE, row.names=NULL))
         pdata <- data.frame(pdata.raw[seq_len(ncol(exp)) + 1 + ann.row, ,
-                                      drop = FALSE])
+                                      drop = FALSE],
+                            stringsAsFactors = FALSE)
         colnames(pdata) <- pdata.raw[1, ]
         colnames(pdata)[1] <- colIdField
         rownames(pdata) <- colnames(exp)
