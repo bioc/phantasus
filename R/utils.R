@@ -496,7 +496,7 @@ parseBriefData <- function(txt) {
 #'
 #' @return \code{data.table} with meta-data or nothing if \code{destdir} does not exist or does not contain files.
 #' @seealso {\code{\link{validateCountsCollection}},\code{\link{getCountsMetaPart}}}
-#' @usage
+#' @examples
 #' \dontrun{
 #'     collDir= "/path/to/my/collection")
 #'     valid_collection = validateCountsCollection(collectionDir = collDir, verbose = TRUE)
